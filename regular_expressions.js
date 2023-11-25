@@ -1,32 +1,5 @@
 const f_main = () => {
-    let op1 = new RegExp("^[a-z]{1}[a-z_]+@gmail.com$"); // constructor
-    // depèn de variables o de l'usuari
-    let escriuLusuari = "[a-z]{1}[a-z_]+";
-    op1 = new RegExp('^'+escriuLusuari+'@gmail.com$'); // constructor
-    let op2 = /^[a-z]{1}[a-z_]+@gmail.com$/; // literal
-
-    let cadena =" prova ";
-    console.info(cadena+" "+op1.test(cadena));
-    cadena = " fguardia@gmail.com";
-    console.info(cadena+" "+op1.test(cadena));
-    cadena = "fguardia@gmail.com ";
-    console.info(cadena+" "+op1.test(cadena));
-    cadena = "El correu: fguardia@gmail.com";
-    console.info(cadena+" "+op1.test(cadena));
-    cadena = "fguardia@gmail.com";
-    console.info(cadena+" "+op1.test(cadena));
-    console.info("----------- op 2 literal ---------");
-    cadena =" prova ";
-    console.info(cadena+" "+op2.test(cadena));
-    cadena = " fguardia@gmail.com";
-    console.info(cadena+" "+op2.test(cadena));
-    cadena = "fguardia@gmail.com ";
-    console.info(cadena+" "+op2.test(cadena));
-    cadena = "El correu: fguardia@gmail.com";
-    console.info(cadena+" "+op2.test(cadena));
-    cadena = "fguardia@gmail.com";
-    console.info(cadena+" "+op2.test(cadena));
-
+    // Exercici 1:
     let ex1 = new RegExp("^[0-9]{2,5}$");
     cadena = "2342h";
     console.info(cadena+" "+ex1.test(cadena));
@@ -44,6 +17,41 @@ const f_main = () => {
     console.info(cadena+" "+ex3.test(cadena));
     cadena = "abcdefghijklmnñopqrstvwxyz";
     console.info(cadena+" "+ex3.test(cadena));
+
+    let ex4 = new RegExp("[2-3][0-9]|40");
+    cadena = "1941";
+    console.info(cadena+" "+ex4.test(cadena));
+    cadena = "2040";
+    console.info(cadena+" "+ex4.test(cadena));
+
+    console.log("\n\n\n\nEXERCICI 2:");
+
+    // Exercici 2
+    let er1 = /\d\d\d[-|+]/;
+    cadena = "dwq7d4-+q-789";
+    console.info(cadena+" "+er1.test(cadena));
+    cadena = "204+";
+    console.info(cadena+" "+er1.test(cadena));
+    cadena = "708-";
+    console.info(cadena+" "+er1.test(cadena));
+
+    let er2 = /e{1}-{0,1}mail/;
+    cadena = "email";
+    console.info(cadena+" "+er2.test(cadena));
+    cadena = "e-mail";
+    console.info(cadena+" "+er2.test(cadena));
+    cadena = "maile";
+    console.info(cadena+" "+er2.test(cadena));
+    cadena = "mail-e";
+    console.info(cadena+" "+er2.test(cadena));
+
+    let er3 = /\dpq/;
+    cadena = "a7pq";
+    console.info(cadena+" "+er3.test(cadena));
+    cadena = "Opq";
+    console.info(cadena+" "+er3.test(cadena));
+    cadena = "pq3";
+    console.info(cadena+" "+er3.test(cadena));
 }
 
 document.addEventListener('DOMContentLoaded',f_main);

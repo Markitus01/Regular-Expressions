@@ -6,8 +6,52 @@
 		Expressions_Regulars
 		</title>
 		<script src="./regular_expressions.js"></script>
+		<style>
+			html
+			{
+				background-color: #2c2c54;
+
+				ul
+				{
+					color: #f7f1e3;
+
+					li
+					{
+						margin-left: 6vw;
+						color: #ff793f;
+
+						p 
+						{
+							margin-left: 3vw;
+							color: #ffda79;
+						}
+					}
+				}
+			}
+		</style>
 	</head>
 	<body>
-
+		<ul>
+			Quin patró cerquen les següents expressions regulars:
+			<li>/\d\d\d-?\d\d/ <p>Busca una cadena de 3 digits seguides (o no) d'un guió, i dos numeros mes al final</p></li><br>
+			<li>/[A-Z0-7][0-9]\d\d/ <p>Busca una lletra de la A a la Z o un numero del 0 al 7, seguits d'un numero del 0 al 9, i dos digits mes</p></li><br>
+			<li>/[^A-Z]\w/ <p>Busca qualsevol valor que NO estigui dins el rang d'A-Z seguit d'una '_', numero o càracter</p></li><br>
+			<li>/\bescola/ <p>Busca únicament la cadena escola, sense cap caràcters abans</p></li><br>
+			<li>/co{3}ab/ <p>Busca la cadena coooab</li><br>
+			<li>/co{3,}l{1,}/ <p>Busca una cadena que comença per 'c', seguida per 3 'o' o més, acabant per una o més 'l'</p></li><br>
+			<li>^graciesJoel$ <p>Busca que la cadena valgui unica i exclusivament graciesJoel (es a dir, res davant i res darrere)</p></li><br>
+			<li>\bgraciesJoel\b <p>Busca la paraula graciesJoel separada per espais a dins de la cadena</p></li><br>
+		</ul>
+		<br>
+		<ul>
+			Indicar un parell de cadenes on trobaríem els següents patrons:
+			<li>/A3-4/ <p>1.- ASA3-4</p> <p>2.- A3-4BMP</p></li><br>
+			<li>/A\dB\d/ <p>1.- plaA3B4</p> <p>2.- A3B4987</p></li><br>
+			<li>/\D\D\d3\D/ <p>1.- !-23a</p> <p>2.- #%33·</p></li><br>
+			<li>/\d\d\w\w\w\D/ <p>1.- 33FA_@</p> <p>2.- 14sazo</p></li><br>
+			<li>/..\d/ <p>1.- º?3</p> <p>2.- !*0</p></li><br>
+			<li>/\d\d\w\s\d/ <p>1.- 23P\n3</p> <p>2.- 23P 2</p></li><br>
+			<li>/[a+pqz4]\d\d/ <p>1.- +33</p> <p>2.- 414</p></li><br>
+		</ul>
 	</body>
 </html>
