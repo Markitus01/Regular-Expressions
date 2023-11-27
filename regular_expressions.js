@@ -6,16 +6,16 @@ const f_main = () => {
     cadena = "2424";
     console.info(cadena+" "+ex1.test(cadena));
 
-    let ex2 = new RegExp("[   ]{3}");
+    let ex2 = new RegExp("[ ]{3}");
     cadena = "olaa   adeu";
     console.info(cadena+" "+ex2.test(cadena));
     cadena = "o ooasd  ksa as  asd  ";
     console.info(cadena+" "+ex2.test(cadena));
 
-    let ex3 = new RegExp("[b-l]{1}");
-    cadena = "amnñopqrstvwxyz";
+    let ex3 = new RegExp("[b-l]{1}[0-9]{2}");
+    cadena = "amnñ2opqrstvwxy3z";
     console.info(cadena+" "+ex3.test(cadena));
-    cadena = "abcdefghijklmnñopqrstvwxyz";
+    cadena = "abcdefg32hijklmnñopqrstvwxyz";
     console.info(cadena+" "+ex3.test(cadena));
 
     let ex4 = new RegExp("[2-3][0-9]|40");
