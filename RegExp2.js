@@ -36,6 +36,13 @@ const f_main = () =>
     cad = "Avui es dimarts, però la setmana vinent, el DIMARTS serà com un divendres";
     er = new RegExp("dimarts", "gi");
     console.log(cad.replace(er, "dissabte"));
+
+    cad = "L'arxiu dibuix.png ocupa més espai qie l'arxiu imatge.png";
+    er = /\.png/g;
+    let pos = cad.search(er);
+    let i = pos;
+    //POR ACABAR
+
     
 }
 
